@@ -1,0 +1,414 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.naverBar_Banner {
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.naverBar_Banner i:last-child {
+    visibility: hidden;
+}
+
+#banner span {
+    color: rgb(135, 212, 235);
+    display: inline-block;
+    transform: rotateY(140deg);
+}
+
+#banner {
+    font-weight: lighter;
+}
+
+input {
+    padding: 8px;
+    border: none;
+    background-color: rgba(185, 173, 173, 0.658);
+}
+
+label {
+    background-color: aqua;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.naverBar_Banner i {
+    position: relative;
+    right: 30px;
+}
+
+.navBar {
+    padding: 0px;
+    margin-left: 120px;
+    margin-right: 130px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+    padding: 0px 15px;
+    color: rgb(102, 101, 101);
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: aquamarine;
+}
+
+li i {
+    position: relative;
+    left: 7px;
+}
+
+.icons i {
+    padding: 0px 20px;
+    font-size: 15px;
+}
+
+.wallpaper {
+    margin: 3%;
+    height: 600px;
+    background: url("https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/6zhGBKQpPrlLNI2a7EfALNs1.png?w=1920&thumb=false");
+    background-size: cover; 
+}
+
+.gameTools {
+    width: 100%;
+    padding: 0% 3% 1% 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card1, .card2, .card3 {
+    height: 170px;
+    width: 270px;
+    box-shadow: 2px 2px 3px black;
+    transition-duration: 2s;
+    object-fit: contain;
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.2);
+}
+
+.authorArtilce {
+    width: 30%;
+}
+
+.authorSection {
+    margin: 3% 5% 3% 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.authorArtilce > h2, .descriptionContainer > h2 {
+    text-decoration: underline solid aqua;
+}
+
+.authorArtilce span {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.authorArtilce > span:nth-child(2), .authorArtilce > span:nth-child(5), .authorArtilce > span:nth-child(8), .authorArtilce > span:nth-child(11) {
+    font-weight: bold;
+}
+
+.authorArtilce > span:nth-child(2) {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.descriptionContainer {
+    width: 80%;
+}
+
+.descriptionContainer > p {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 0% 5%;
+    background-color: rgba(137, 43, 226, 0.733);
+    border-style: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 300px) {
+    .naverBar_Banner {
+        margin: 0px;
+        font-size: 10px;
+    }
+
+    .naverBar_Banner i:last-child {
+        visibility: visible;
+        font-size: 15px;
+        position: relative;
+        right: 0;
+    }
+
+    .naverBar_Banner form>input,
+    label,
+    i:nth-child(2) {
+        display: none;
+    }
+
+    .navBar {
+        margin: 0;
+    }
+
+    ul li {
+        display: none;
+    }
+    
+    .icons i {
+        font-size: 15px;
+    }
+
+    .wallpaper {
+        margin: 4%;
+        height: 600px;
+        background-image: url("https://i.pinimg.com/736x/c9/55/03/c955035560ec5e725472047d95ea9508.jpg");
+    }
+
+    .gameContainer, .wallpaper button {
+       display: none;
+    }
+
+    .gameTools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1, .card2, .card3 {
+        margin: 10px 0;
+        height: 150px;
+        width: 200px;
+    }
+
+    .authorSection {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .authorArtilce {
+        width: 100%;
+    }
+
+    .descriptionContainer {
+        margin-top: 20px;
+    }
+
+    .authorArtilce h2, .descriptionContainer h2 {
+        font-size: 20px;
+    }
+
+    .authorArtilce span, .descriptionContainer p {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 301px) and (max-width: 400px) {
+
+    .naverBar_Banner {
+        margin: 0px;
+        font-size: 15px;
+    }
+
+    .naverBar_Banner i:last-child {
+        visibility: visible;
+        font-size: 20px;
+        position: relative;
+        right: 0;
+    }
+
+    .naverBar_Banner form>input,
+    label,
+    i:nth-child(2) {
+        display: none;
+    }
+
+    .navBar {
+        margin: 0;
+    }
+
+    ul li {
+        display: none;
+    }
+    
+    .icons i {
+        font-size: 20px;
+    }
+
+    .wallpaper {
+        margin: 4%;
+        height: 600px;
+        background-image: url("https://i.pinimg.com/736x/c9/55/03/c955035560ec5e725472047d95ea9508.jpg");
+    }
+
+    .gameTools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1, .card2, .card3 {
+        margin: 10px 0;
+    }
+
+    .authorSection {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .authorArtilce {
+        width: 100%;
+    }
+
+    .descriptionContainer {
+        margin-top: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+
+    .naverBar_Banner {
+        margin: 0px;
+        font-size: 15px;
+    }  
+    
+    .naverBar_Banner i:last-child {
+        visibility: visible;
+        font-size: 20px;
+        position: relative;
+        right: 0;
+    }
+
+    .naverBar_Banner form>input,
+    label,
+    i:nth-child(2) {
+        display: none;
+    }
+
+    .naverBar_Banner form>input,
+    label,
+    i:nth-child(2) {
+        display: none;
+    }
+
+    .navBar {
+        margin: 0;
+    }
+
+    ul li {
+        display: none;
+    }
+    
+    .icons i {
+        font-size: 20px;
+    }
+
+    .wallpaper {
+        margin: 4%;
+        height: 700px;
+        background-image: url("https://i.pinimg.com/736x/c9/55/03/c955035560ec5e725472047d95ea9508.jpg");
+    }
+
+    .gameTools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1, .card2, .card3 {
+        margin: 20px 0;
+        height: 170px;
+        width: 300px;
+    }
+
+    .authorSection {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .authorArtilce {
+        width: 100%;
+    }
+
+    .descriptionContainer {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+
+    .naverBar_Banner {
+        padding: 40px;
+        margin: 0px;
+    }
+
+    .navBar {
+        margin: 0;
+    }
+
+    .navBar {
+        padding: 0px 30px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    ul li {
+        padding: 0px 18px;
+        font-size: 20px;
+    }
+
+    .icons {
+        padding: 40px;
+        text-align: end;
+    }
+
+    .gameTools {
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+
+    .card1, .card2, .card3 {
+        margin: 10px 0;
+        height: 170px;
+        width: 300px;
+    }
+
+     .authorArtilce {
+        width: 50%;
+    }
+
+}
